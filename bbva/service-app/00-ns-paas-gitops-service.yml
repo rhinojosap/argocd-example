@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: "PaaS gitOps Service Deployment"
+    openshift.io/display-name: paas-gitops-service
+    openshift.io/requester: MB77823
+  labels:
+    kubernetes.io/metadata.name: paas-gitops-service
+  name: paas-gitops-service
