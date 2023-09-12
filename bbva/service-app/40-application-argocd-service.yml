@@ -10,8 +10,8 @@ spec:
     server: https://kubernetes.default.svc
   project: appproject-argocd-service
   source:
-    path: ./first-deploy/argocd-paas-example
+    path: ./first-deploy/argocd-paas-example/.
     repoURL: https://scm.live.es.nextgen.igrupobbva/mb77823/argocd-paas.git
-    targetRevision: HEAD
+    targetRevision: main
   syncPolicy:
     automated: {}

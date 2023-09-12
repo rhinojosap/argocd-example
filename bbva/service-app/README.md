@@ -29,3 +29,12 @@ oc delete -f 20-secret-repository-conection-gitlab-infra.yml
 oc delete -f 00-ns-paas-gitops-service.yml
 
 ```
+
+
+## Objetos residuantes
+
+```bash
+
+oc delete cm -n paas-gitops-service cm-primer-ejemplo
+
+```
