@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  generation: 1
+  name: appproject-argocd-service
+  namespace: paas-gitops-infra
+spec:
+  description: Mi primer Proyecto de PaaS en ArgoCD para muestra
+  destinations:
+  - name: 'paas-gitops-service'
+    namespace: 'paas-gitops-service'
+    server: https://kubernetes.default.svc
+  roles:
+  - description: Primer ejemplo de rol admin para mi servicio de PaaS en ArgoCD
+    groups:
+    - admin
+    name: role-admin-project-service
+    policies:
+    - p, proj:argocd-project-service:role-admin-project-service, applications, create, argocd-project-service/*, allow
+    - p, proj:argocd-project-service:role-admin-project-service, applications, get, argocd-project-service/*, allow
+  sourceRepos:
+  - https://scm.live.es.nextgen.igrupobbva/mb77823/argocd-paas.git
