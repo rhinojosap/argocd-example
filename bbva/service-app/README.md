@@ -37,4 +37,10 @@ oc delete -f 00-ns-paas-gitops-service.yml
 
 oc delete cm -n paas-gitops-service cm-primer-ejemplo
 
+oc delete -f  caas-router-paas-gato-test.yml
+oc delete -f  cm-primer-ejemplo.yml
+oc delete -f  deployment-paas-gato-test.yml
+oc delete -f  service-paas-gato-test.yml
+oc delete -f  virtual-service-paas-gato-test.yml
+
 ```
