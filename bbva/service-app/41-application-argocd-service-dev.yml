@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   generation: 1
-  name: application-argocd-service
+  name: application-argocd-service-dev
   namespace: paas-gitops-infra
 spec:
   destination:
-    namespace: paas-gitops-service
+    namespace: paas-gitops-service-dev
     server: https://kubernetes.default.svc
   project: appproject-argocd-service
   source:
     path: ./first-deploy/argocd-paas-example/.
     repoURL: https://scm.live.es.nextgen.igrupobbva/mb77823/argocd-paas.git
-    targetRevision: main
+    targetRevision: develop
   syncPolicy:
     automated: {}

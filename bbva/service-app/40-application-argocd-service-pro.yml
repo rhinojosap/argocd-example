@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   generation: 1
-  name: application-argocd-service
+  name: application-argocd-service-pro
   namespace: paas-gitops-infra
 spec:
   destination:
