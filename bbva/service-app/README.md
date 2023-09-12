@@ -23,9 +23,9 @@ oc apply -f 40-application-argocd-service.yml
 
 ```bash
 
-oc delete -f 00-ns-paas-gitops-service.yml
-oc delete -f 20-secret-repository-conection-gitlab-infra.yml
-oc delete -f 30-appproject-argocd-service.yml
 oc delete -f 40-application-argocd-service.yml
+oc delete -f 30-appproject-argocd-service.yml
+oc delete -f 20-secret-repository-conection-gitlab-infra.yml
+oc delete -f 00-ns-paas-gitops-service.yml
 
 ```
